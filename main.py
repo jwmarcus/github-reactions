@@ -28,7 +28,7 @@ r = http.request("GET", f"https://api.github.com{endpoint}", headers=headers)
 
 if r.status == 200:
     reactions_json = json.loads(r.data.decode("utf-8"))
-    print(json.dumps(reactions_json, indent=2, sort_keys=true))
+    print(json.dumps(reactions_json, indent=2, sort_keys=True))
 else:
     print(r.status)
     print(r.data)
